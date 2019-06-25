@@ -12,7 +12,6 @@ exports.handler = function (event, context, callback) {
             throw error;
         }
         else {
-            console.log(data);
         }
     });
 
