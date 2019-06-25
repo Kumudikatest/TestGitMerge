@@ -8,8 +8,7 @@
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "d029bbd8-4e83-4245-900c-051674c82049",
-          "512221d6-9685-4015-b1c2-32ffdfaba118"
+          "d029bbd8-4e83-4245-900c-051674c82049"
         ],
         "isRemovable": false,
         "filePath": "TestGitMerge"
@@ -40,24 +39,14 @@
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
         }
-      },
-      "512221d6-9685-4015-b1c2-32ffdfaba118": {
-        "id": "512221d6-9685-4015-b1c2-32ffdfaba118",
-        "parent": "754f6148-aa39-4568-9790-fe7106dbdc86",
-        "name": "New.js",
-        "type": "JS_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "TestGitMerge/New.js",
-        "code": "//Kumu comment"
       }
     },
-    "deletedFiles": [],
+    "deletedFiles": [
+      "TestGitMerge/New.js"
+    ],
     "rootNode": "754f6148-aa39-4568-9790-fe7106dbdc86",
     "openFiles": [
-      "d029bbd8-4e83-4245-900c-051674c82049",
-      "512221d6-9685-4015-b1c2-32ffdfaba118"
+      "d029bbd8-4e83-4245-900c-051674c82049"
     ],
     "currentFileId": "d029bbd8-4e83-4245-900c-051674c82049",
     "resources": {
@@ -353,7 +342,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561449491283
+    "lastSave": 1561458185978
   },
   "VCS_STATE": {
     "provider": "GitHub",
