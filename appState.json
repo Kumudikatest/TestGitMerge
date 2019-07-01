@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "TestGitMerge/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\"],\n        Limit: 139\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n\n    callback(null, { \"message\": \"S\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\", \"family_name\", \"nickname\", \"profile\", \"website\"],\n        Filter: \"test\",\n        Limit: 130,\n        PaginationToken: \"sample\"\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n\n    \n\n    callback(null, { \"message\": \"S\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,7 +32,7 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1TestAPIhiruget",
+            "resourceName": "apigusEast1TestAPIhiruput",
             "config": {}
           }
         ],
@@ -343,6 +343,49 @@
           "stageDeploymentId": "tv5t7m",
           "mode": 1
         }
+      },
+      "s3indunil1": {
+        "name": "s3indunil1",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "indunil1"
+          }
+        }
+      },
+      "apigusEast1TestAPIhiruput": {
+        "name": "apigusEast1TestAPIhiruput",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/hiru/test": "2b8zt0",
+            "/hiru": "3nc52b",
+            "/hiru/sample": "4226gg",
+            "/MyLambda": "98nqbj",
+            "/": "h2lelj6j7k",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/hiru",
+          "resourceName": "hiru",
+          "resourceId": "3nc52b",
+          "restMethod": "PUT",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "tv5t7m",
+          "mode": 1
+        }
       }
     },
     "customTemplate": {
@@ -378,7 +421,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561975893540
+    "lastSave": 1561976884183
   },
   "VCS_STATE": {
     "provider": "GitHub",
