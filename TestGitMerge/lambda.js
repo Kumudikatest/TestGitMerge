@@ -5,9 +5,9 @@ const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: "us-east-1_D10y3fy0o",
-        AttributesToGet: ["sub", "name", "family_name", "nickname"],
-        Filter: "Hiruuuu",
-        Limit: 12221111111
+        AttributesToGet: ["sub", "name", "family_name", "nickname", "given_name", "middle_name"],
+        Filter: "Hiru",
+        Limit: 123
     }, function (error, data) {
         if (error) {
             cosole.log(error);
@@ -16,6 +16,7 @@ exports.handler = function (event, context, callback) {
         else {
         }
     });
+   
 
 
     callback(null, { "message": "S" });
