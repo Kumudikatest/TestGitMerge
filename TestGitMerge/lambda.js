@@ -1,14 +1,12 @@
 let AWS = require('aws-sdk');
-const s3 = new AWS.S3();
 const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 
 exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: "us-east-1_D10y3fy0o",
-        AttributesToGet: ["sub", "family_name", "nickname", "profile", "website"],
-        Filter: "test",
-        Limit: 130,
-        PaginationToken: "sample"
+        AttributesToGet: ["sub", "name"],
+        Filter: "eeeee",
+        Limit: 121
     }, function (error, data) {
         if (error) {
             cosole.log(error);
@@ -17,8 +15,6 @@ exports.handler = function (event, context, callback) {
         else {
         }
     });
-
-    
 
     callback(null, { "message": "S" });
 }
