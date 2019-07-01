@@ -6,8 +6,8 @@ exports.handler = function (event, context, callback) {
     cognito_idp.listUsers({
         UserPoolId: "us-east-1_D10y3fy0o",
         AttributesToGet: ["sub", "name", "family_name", "nickname"],
-        Filter: "Hiru",
-        Limit: 12221
+        Filter: "Hiruuuu",
+        Limit: 12221111111
     }, function (error, data) {
         if (error) {
             cosole.log(error);
