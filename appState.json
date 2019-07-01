@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "TestGitMerge/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\"],\n        Limit: 138\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n\n    callback(null, { \"message\": \"S\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\"],\n        Limit: 139\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n\n    callback(null, { \"message\": \"S\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -378,7 +378,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561975656426
+    "lastSave": 1561975893540
   },
   "VCS_STATE": {
     "provider": "GitHub",
