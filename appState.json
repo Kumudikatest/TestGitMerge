@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "TestGitMerge/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\", \"name\", \"family_name\", \"nickname\", \"given_name\", \"middle_name\"],\n        Filter: \"Hiru\",\n        Limit: 123\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n   \n\n\n    callback(null, { \"message\": \"S\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: \"us-east-1_D10y3fy0o\",\n        AttributesToGet: [\"sub\", \"name\", \"family_name\", \"nickname\"],\n        Filter: \"Hiruuuu\",\n        Limit: 12221111111\n    }, function (error, data) {\n        if (error) {\n            cosole.log(error);\n            throw error;\n        }\n        else {\n        }\n    });\n\n\n    callback(null, { \"message\": \"S\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -397,17 +397,6 @@
             "name": "hiru.test123"
           }
         }
-      },
-      "s3foobucketindunil": {
-        "name": "s3foobucketindunil",
-        "type": "S3",
-        "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "foobucketindunil"
-          }
-        }
       }
     },
     "customTemplate": {
@@ -443,7 +432,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561982857035
+    "lastSave": 1561982910053
   },
   "VCS_STATE": {
     "provider": "GitHub",
